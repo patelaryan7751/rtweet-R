@@ -18,7 +18,7 @@ tweetcnt_df2 <-nrow(tweet_df2)
 if(tweetcnt_df2!=0L){
   
 tweet_dfn <- function(sincer_id_n,tweetcnt_df_n) {
-  tweet_dfno <- search_tweets("#rstats", n=18000, since=Sys.Date()-1, until=Sys.Date(), since_id=sincer_id_n)
+  tweet_dfno <- search_tweets("#rstats", n=18000, since=Sys.Date()-1, until=Sys.Date(), since_id=sincer_id_n, token = passtoken)
   sincer_id_dfn <- max(tweet_dfno$status_id)
   tweetcnt_dfno <-nrow(tweet_dfno)
   if(tweetcnt_df_n!=0L){
