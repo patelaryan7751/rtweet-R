@@ -1,5 +1,4 @@
 library(rtweet)
-library(dplyr)
 
 passtoken <- create_token(
   app = "rtweetaryan",
